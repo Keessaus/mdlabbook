@@ -467,7 +467,7 @@ fontsize: 11pt
    }
    close($fh->{wholemd}) ;
 
-   system("pandoc -s --variable mainfont=Georgia --latex-engine=xelatex ".
+   system("pandoc -s --variable mainfont=Georgia --pdf-engine=xelatex ".
           $fn->{wholemd}." --toc -o ".$fn->{wholepdf}) ;
 
    chdir $cwd ;
