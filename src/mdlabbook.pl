@@ -239,7 +239,7 @@ author: ".$opts->{author}."
 
       my ($y, $m) = ($month =~ /(20[0-9][0-9])([0-9][0-9])/) ;
 
-      my $calout = `cal $m $y` ; chomp $calout ;
+      my $calout = `ncal -bh $m $y` ; chomp $calout ;
       my @callines = split(/\n/, $calout) ;
       my $month_string = shift @callines ;
       $month_string =~ s/^ +// ;
